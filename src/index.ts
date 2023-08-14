@@ -1,7 +1,6 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
-import { HashManager } from './services/HashManager'
 
 dotenv.config()
 
@@ -18,8 +17,3 @@ app.get("/ping", (req, res) => {
     res.send("pong")
 })
 
-// const hashManager = new HashManager()
-// hashManager.hash("fulano123").then((res) => {
-//     console.log(res);
-
-// })
