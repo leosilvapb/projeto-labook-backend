@@ -1,16 +1,16 @@
 import z from 'zod'
 
 export interface LikeOrDislikePostInputDTO {
-    id: string,
+    postId: string,
     token: string,
     like: boolean
 
 }
 
-export type LikeOrDislikeOutputDTO = undefined
+export type LikeOrDislikePostOutputDTO = undefined
 
 export const LikeOrDislikePostSchema = z.object({
-    id: z.string().min(1),
+    postId: z.string().min(1),
     token: z.string().min(1),
     like: z.boolean()
-})
+}).transform(data => data as LikeOrDislikePostInputDTO)

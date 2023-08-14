@@ -10,6 +10,12 @@ CREATE TABLE
         created_at TEXT DEFAULT (DATETIME('now', 'localtime')) NOT NULL
     );
 
+-- tipo NORMAL e senha = fulano123
+
+-- tipo NORMAL e senha = beltrana00
+
+-- tipo ADMIN e senha = astrodev99
+
 INSERT INTO
     users (id, name, email, password, role)
 VALUES (
@@ -36,7 +42,7 @@ CREATE TABLE
     posts(
         id TEXT PRIMARY KEY UNIQUE NOT NULL,
         creator_id TEXT NOT NULL,
-        content TEXT UNIQUE NOT NULL,
+        content TEXT NOT NULL,
         likes INTEGER DEFAULT (0) NOT NULL,
         dislikes INTEGER DEFAULT (0) NOT NULL,
         created_at TEXT DEFAULT (DATETIME('now', 'localtime')) NOT NULL,
