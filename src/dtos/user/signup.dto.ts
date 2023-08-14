@@ -16,4 +16,4 @@ export const SignupSchema = z.object(
         email: z.string().email(),
         password: z.string().min(4)
     }
-)
+).transform(data => data as SignupInputDTO)
